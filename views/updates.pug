@@ -1,0 +1,27 @@
+doctype html
+html(lang="en")
+  head
+  
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title= title
+    link(rel="stylesheet", href="/css/style.css")
+  body
+    .container
+      h1 Update Custom Object Form
+      a.button-link.secondary(href="/") Return to the homepage
+
+      form(action="/update-cobj" method="POST")
+        .form-group
+          label(for="name") Name
+          input#name(type="text" name="name" required)
+
+        .form-group
+          label(for="species") Species
+          input#species(type="text" name="species" required)
+
+        .form-group
+          label(for="sunlight") Sunlight
+          input#sunlight(type="text" name="sunlight" required)
+
+        button(type="submit") Create Plant Record
